@@ -61,8 +61,8 @@ def main():
         if (len(instruction) >= 3):
             match instruction[0]:
                 case "G01":
-                    scara.rotate_A(float(instruction[1][1:8]))
-                    scara.rotate_B(float(instruction[2][1:8]))
+                    scara.rotate_A(float(instruction[1][1:]))
+                    scara.rotate_B(float(instruction[2][1:]))
         # Refresh the canvas
         print_position(old_position, scara.get_head_position(), canvas, origin)
         print_arms(armA, armB, scara.get_B_position(), scara.get_head_position(), canvas, origin)
