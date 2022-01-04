@@ -59,8 +59,7 @@ def main():
         instruction = gcode.GetNextInstruction()
         # Interpreting GCode
         if (len(instruction) >= 3):
-            match instruction[0]:
-                case "G01":
+            if instruction[0] == "G01":
                     scara.rotate_A(float(instruction[1][1:]))
                     scara.rotate_B(float(instruction[2][1:]))
         # Refresh the canvas
